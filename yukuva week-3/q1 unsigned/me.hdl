@@ -72,6 +72,5 @@ got(x=x[14],y=y14,z=c14,out=c15);
 fun(x=x[15],y=y15,z=c15,out=s[15]);
 got(x=x[15],y=y15,z=c15,out=c16);
     
-And(a=c16,b=c16,out=overflow);       
-
+Xor(a=c16,b=as,out=overflow);       
 }
