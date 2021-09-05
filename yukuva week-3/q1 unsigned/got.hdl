@@ -1,0 +1,13 @@
+CHIP got
+{
+    IN x,y,z;
+    OUT out;
+
+    PARTS:
+    
+    And(a=x,b=y,out=f1);
+    And(a=z,b=x,out=f2);
+    And(a=y,b=z,out=f3);
+    Or(a=f1,b=f2,out=f4);
+    Or(a=f3,b=f4,out=out);
+}

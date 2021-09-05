@@ -1,0 +1,77 @@
+CHIP me
+{
+    IN x[16],y[16],as;
+    OUT s[16],overflow;
+
+    PARTS:
+
+    Xor(a=y[0],b=as,out=y0);
+    Xor(a=y[1],b=as,out=y1);
+    Xor(a=y[2],b=as,out=y2);
+    Xor(a=y[3],b=as,out=y3);
+    Xor(a=y[4],b=as,out=y4);
+    Xor(a=y[5],b=as,out=y5);
+    Xor(a=y[6],b=as,out=y6);
+    Xor(a=y[7],b=as,out=y7);
+    Xor(a=y[8],b=as,out=y8);
+    Xor(a=y[9],b=as,out=y9);
+    Xor(a=y[10],b=as,out=y10);
+    Xor(a=y[11],b=as,out=y11);
+    Xor(a=y[12],b=as,out=y12);
+    Xor(a=y[13],b=as,out=y13);
+    Xor(a=y[14],b=as,out=y14);
+    Xor(a=y[15],b=as,out=y15);
+    
+//
+
+fun(x=x[0],y=y0,z=as,out=s[0]);
+got(x=x[0],y=y0,z=as,out=c1);
+
+fun(x=x[1],y=y1,z=c1,out=s[1]);
+got(x=x[1],y=y1,z=c1,out=c2);
+
+fun(x=x[2],y=y2,z=c2,out=s[2]);
+got(x=x[2],y=y2,z=c2,out=c3);
+
+fun(x=x[3],y=y3,z=c3,out=s[3]);
+got(x=x[3],y=y3,z=c3,out=c4);
+
+fun(x=x[4],y=y4,z=c4,out=s[4]);
+got(x=x[4],y=y4,z=c4,out=c5);
+
+fun(x=x[5],y=y5,z=c5,out=s[5]);
+got(x=x[5],y=y5,z=c5,out=c6);
+
+fun(x=x[6],y=y6,z=c6,out=s[6]);
+got(x=x[6],y=y6,z=c6,out=c7);
+
+fun(x=x[7],y=y7,z=c7,out=s[7]);
+got(x=x[7],y=y7,z=c7,out=c8);
+
+fun(x=x[8],y=y8,z=c8,out=s[8]);
+got(x=x[8],y=y8,z=c8,out=c9);
+
+fun(x=x[9],y=y9,z=c9,out=s[9]);
+got(x=x[9],y=y9,z=c9,out=c10);
+
+fun(x=x[10],y=y10,z=c10,out=s[10]);
+got(x=x[10],y=y10,z=c10,out=c11);
+
+fun(x=x[11],y=y11,z=c11,out=s[11]);
+got(x=x[11],y=y11,z=c11,out=c12);
+
+fun(x=x[12],y=y12,z=c12,out=s[12]);
+got(x=x[12],y=y12,z=c12,out=c13);
+
+fun(x=x[13],y=y13,z=c13,out=s[13]);
+got(x=x[13],y=y13,z=c13,out=c14);
+
+fun(x=x[14],y=y14,z=c14,out=s[14]);
+got(x=x[14],y=y14,z=c14,out=c15);
+
+fun(x=x[15],y=y15,z=c15,out=s[15]);
+got(x=x[15],y=y15,z=c15,out=c16);
+    
+Xor(a=c15,b=c16,out=overflow);       
+
+}

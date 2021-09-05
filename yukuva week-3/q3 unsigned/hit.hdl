@@ -1,0 +1,10 @@
+CHIP hit
+{
+    IN a,b,c,d;
+    OUT out;
+
+    PARTS:
+    And(a=a,b=b,out=sh);
+    And(a=c,b=d,out=sh1);
+    And(a=sh,b=sh1,out=out);
+}

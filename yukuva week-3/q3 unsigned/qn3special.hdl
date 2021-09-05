@@ -1,0 +1,16 @@
+CHIP qn3special
+{
+    IN p3,p2,p1, q3, q2, q1 , q0;
+    OUT out;
+
+    PARTS:
+    hit ( a = p3 , b= p2 , c = p1 , d= q0, out = t1);
+    hit ( a = p3 , b= p2 , c = q1 , d= q1, out =t2);
+    Or(a=t1, b=t2, out=k1);
+    
+    And(a=p3, b=q2, out=t3);
+    Or(a=t3, b=q3, out=k2);
+
+    Or(a=k1, b=k2, out=out);   
+
+}

@@ -1,0 +1,22 @@
+CHIP game
+{
+    IN c0,p0,p1,p2,p3,q0,q1,q2,q3;
+    OUT c1,c2,c3;
+
+    PARTS:
+
+    And(a=p0,b=c0,out=ot);
+    Or(a=ot,b=q0,out=c1);
+    
+    hit(a=p1,b=p0,c=c0,d=c0,out=o1);
+    And(a=p1,b=q0,out=o2);
+    Or(a=o1,b=o2,out=o3);
+    Or(a=o3,b=q1,out=c2);
+
+    hit(a=p2,b=p1,c=p0,d=c0,out=o4);
+    hit(a=p2,b=p1,c=q0,d=true,out=o5);
+    And(a=p2,b=q1,out=o6);
+    Or(a=o4,b=o5,out=o7);
+    Or(a=o6,b=q2,out=o8);
+    Or(a=o7,b=o8,out=c3);
+}
